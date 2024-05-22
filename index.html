@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="me.jpg" type="image/x-icon" style="border-radius: 50%;">
+</head>
+<body>
+    <div class="main">
+        <div class="box one" id="rabbit"></div>
+        <div class="box two" id="tree"></div>
+        <div class="box three" id="lion"></div>
+        <div class="box four" id="grey"></div>
+        <div class="box five" id="follower"></div>
+    </div>
+    <script>
+        const box =document.querySelectorAll('.box');
+        const rabbit = new Audio()
+        rabbit.src = 'rabbit.mp3';
+        const lion = new Audio()
+        lion.src = 'lion.mp3';
+        const follower = new Audio()
+        follower.src = 'follower.mp3';
+        const grey = new Audio()
+        grey.src = 'grey.mp3';
+        const tree = new Audio()
+        tree.src = 'tree.mp3';
+        box[0].addEventListener('mouseover',function(){
+            rabbit.play()
+            this.addEventListener('mouseout',function(){
+                rabbit.pause()
+            })
+        })
+        box[1].addEventListener('mouseover',function(){
+            tree.play()
+            this.addEventListener('mouseout',function(){
+                tree.pause()
+            })
+        })
+        box[2].addEventListener('mouseover',function(){
+            lion.play()
+            this.addEventListener('mouseout',function(){
+                lion.pause()
+            })
+        })
+        box[3].addEventListener('mouseover',function(){
+            grey.play()
+            this.addEventListener('mouseout',function(){
+                grey.pause()
+            })
+        })
+        box[4].addEventListener('mouseover',function(){
+            follower.play()
+            this.addEventListener('mouseout',function(){
+                follower.pause()
+            })
+        })
+    </script>
+</body>
+</html>
